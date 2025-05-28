@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/your-username/devops-assignment  # replace this
-    targetRevision: HEAD
+    repoURL: https://github.com/Cheswini0097/appscrip.git  # replace this
+    targetRevision: main
     path: manifests
   destination:
     server: https://kubernetes.default.svc
