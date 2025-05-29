@@ -9,9 +9,6 @@ This repository contains infrastructure-as-code and Kubernetes deployment manife
 - [Prerequisites](#prerequisites)
 - [Setup & Installation](#setup--installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Project Overview
 

@@ -1,0 +1,42 @@
+NAME                                                    READY   STATUS    RESTARTS      AGE
+pod/argocd-application-controller-0                     1/1     Running   0             54m
+pod/argocd-applicationset-controller-7d7b567677-s2gvq   1/1     Running   0             54m
+pod/argocd-dex-server-7fc4fb9889-ffz4k                  1/1     Running   1 (54m ago)   54m
+pod/argocd-notifications-controller-b57f69f56-9kr4g     1/1     Running   0             54m
+pod/argocd-redis-765fb4f75d-75rrm                       1/1     Running   0             54m
+pod/argocd-repo-server-6498759889-65wgx                 1/1     Running   0             54m
+pod/argocd-server-6bb65bc779-mfqbl                      1/1     Running   0             54m
+pod/nginx-deployment-54b9c68f67-4r5qn                   1/1     Running   0             18m
+pod/nginx-deployment-54b9c68f67-chdgs                   1/1     Running   0             18m
+
+NAME                                              TYPE           CLUSTER-IP       EXTERNAL-IP                                                              PORT(S)                      AGE
+service/argocd-applicationset-controller          ClusterIP      172.20.78.200    <none>                                                                   7000/TCP,8080/TCP            54m
+service/argocd-dex-server                         ClusterIP      172.20.125.146   <none>                                                                   5556/TCP,5557/TCP,5558/TCP   54m
+service/argocd-metrics                            ClusterIP      172.20.122.220   <none>                                                                   8082/TCP                     54m
+service/argocd-notifications-controller-metrics   ClusterIP      172.20.155.35    <none>                                                                   9001/TCP                     54m
+service/argocd-redis                              ClusterIP      172.20.52.197    <none>                                                                   6379/TCP                     54m
+service/argocd-repo-server                        ClusterIP      172.20.208.253   <none>                                                                   8081/TCP,8084/TCP            54m
+service/argocd-server                             LoadBalancer   172.20.151.137   a76e470ea51e0435e82a8438fbc79cc0-711447336.us-east-1.elb.amazonaws.com   80:32470/TCP,443:31167/TCP   54m
+service/argocd-server-metrics                     ClusterIP      172.20.236.42    <none>                                                                   8083/TCP                     54m
+service/nginx-service                             LoadBalancer   172.20.78.8      a3bb176dfef1545aeae5a3d56caafcda-136261359.us-east-1.elb.amazonaws.com   80:31229/TCP                 18m
+
+NAME                                               READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/argocd-applicationset-controller   1/1     1            1           54m
+deployment.apps/argocd-dex-server                  1/1     1            1           54m
+deployment.apps/argocd-notifications-controller    1/1     1            1           54m
+deployment.apps/argocd-redis                       1/1     1            1           54m
+deployment.apps/argocd-repo-server                 1/1     1            1           54m
+deployment.apps/argocd-server                      1/1     1            1           54m
+deployment.apps/nginx-deployment                   2/2     2            2           18m
+
+NAME                                                          DESIRED   CURRENT   READY   AGE
+replicaset.apps/argocd-applicationset-controller-7d7b567677   1         1         1       54m
+replicaset.apps/argocd-dex-server-7fc4fb9889                  1         1         1       54m
+replicaset.apps/argocd-notifications-controller-b57f69f56     1         1         1       54m
+replicaset.apps/argocd-redis-765fb4f75d                       1         1         1       54m
+replicaset.apps/argocd-repo-server-6498759889                 1         1         1       54m
+replicaset.apps/argocd-server-6bb65bc779                      1         1         1       54m
+replicaset.apps/nginx-deployment-54b9c68f67                   2         2         2       18m
+
+NAME                                             READY   AGE
+statefulset.apps/argocd-application-controller   1/1     54m
